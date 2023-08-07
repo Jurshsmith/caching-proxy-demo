@@ -33,3 +33,4 @@ config :logger, level: :warning
 config :phoenix, :plug_init_mode, :runtime
 
 config :caching_proxy_demo, :cache, CachingProxyDemo.CacheMock
+config :caching_proxy_demo, :marvel_http_client, CachingProxyDemo.Marvel.HTTPClientMock

@@ -24,6 +24,7 @@ defmodule CachingProxyDemo.DataCase do
       import Ecto.Changeset
       import Ecto.Query
       import CachingProxyDemo.DataCase
+      import CachingProxyDemo.Factory
     end
   end
 
