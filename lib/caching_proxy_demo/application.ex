@@ -16,6 +16,8 @@ defmodule CachingProxyDemo.Application do
       {Phoenix.PubSub, name: CachingProxyDemo.PubSub},
       # Start Finch
       {Finch, name: CachingProxyDemo.Finch},
+      # Start Cache for Marvel
+      {CachingProxyDemo.Cache, name: CachingProxyDemo.Marvel.Cache.name()},
       # Start the Endpoint (http/https)
       CachingProxyDemoWeb.Endpoint
       # Start a worker by calling: CachingProxyDemo.Worker.start_link(arg)
