@@ -1,0 +1,32 @@
+<div class="flex w-full justify-center">
+  <div>
+    <div class="mt-2">
+      Page <%= @characters.current_page.page %> of <%= @characters.total_pages %>
+    </div>
+
+    <div class="flex gap-6">
+      <a href={~p"/?limit=#{@characters.previous_page.limit}&offset=#{@characters.previous_page.offset}"}>
+        <button type="button" class="my-2 p-3 bg-lime-400 rounded-lg opacity-80 hover:opacity-100">
+          <.icon name="hero-forward-outline" class="h-5 w-5" /> Prev Page
+        </button>
+      </a>
+  
+      <a href={~p"/?limit=#{@characters.next_page.limit}&offset=#{@characters.next_page.offset}"}>
+        <button type="button" class="my-2 p-3 bg-lime-400 rounded-lg opacity-80 hover:opacity-100">
+          <.icon name="hero-forward-outline" class="h-5 w-5" /> Next Page
+        </button>
+      </a>
+    </div>
+
+    <div class="container flex flex-wrap gap-4 m-6">
+      <%= for character <- @characters.data do %>
+
+      <div class="my-1 px-1">
+        <img src={character.thumbnail.image_url} class="rounded-lg h-72" />
+        <div><%= character.name %></div>
+      </div>
+
+      <% end %>
+    </div>
+  </div>
+</div>

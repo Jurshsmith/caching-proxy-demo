@@ -28,6 +28,7 @@ defmodule CachingProxyDemoWeb.ConnCase do
       import Plug.Conn
       import Phoenix.ConnTest
       import CachingProxyDemoWeb.ConnCase
+      import CachingProxyDemo.Factory
     end
   end
 
