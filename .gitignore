@@ -35,3 +35,5 @@ caching_proxy_demo-*.tar
 npm-debug.log
 /assets/node_modules/
 
+.env
+

@@ -8,6 +8,10 @@
 import Config
 
 config :caching_proxy_demo,
+  marvel_private_key: System.get_env("MARVEL_PRIVATE_KEY"),
+  marvel_public_key: System.get_env("MARVEL_PUBLIC_KEY")
+
+config :caching_proxy_demo,
   ecto_repos: [CachingProxyDemo.Repo]
 
 # Configures the endpoint

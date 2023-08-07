@@ -20,6 +20,10 @@ if System.get_env("PHX_SERVER") do
   config :caching_proxy_demo, CachingProxyDemoWeb.Endpoint, server: true
 end
 
+config :caching_proxy_demo,
+  marvel_private_key: System.get_env("MARVEL_PRIVATE_KEY"),
+  marvel_public_key: System.get_env("MARVEL_PUBLIC_KEY")
+
 if config_env() == :prod do
   database_url =
     System.get_env("DATABASE_URL") ||
